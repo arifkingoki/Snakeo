@@ -1,0 +1,14 @@
+{
+  "name": "snake-io-server",
+  "version": "1.0.0",
+  "description": "Authoritative multiplayer server for 2D Snake.io",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "postinstall": "node copy-client.js"
+  },
+  "dependencies": {
+    "socket.io": "^4.7.5"
+  },
+  "engines": { "node": ">=16" }
+}

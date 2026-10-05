@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<title>Snake Arena Online</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="game">
+  <canvas id="c"></canvas>
+  <div id="hud" class="hidden">
+    <div id="score">0</div>
+    <div id="info"><span id="roomTxt">Room -</span><br><span id="onlineTxt">Online: -</span></div>
+    <div id="lb"></div>
+    <div id="joyBase"><div id="joyKnob"></div></div>
+    <div id="boostBtn">BOOST</div>
+  </div>
+</div>
+
+<div id="loading" class="screen"><h1>SNAKE ARENA</h1><div class="bar"><div id="barFill"></div></div></div>
+
+<div id="menu" class="screen hidden">
+  <h1>SNAKE ARENA</h1>
+  <input id="nameInput" maxlength="14" placeholder="Your name" autocomplete="off">
+  <div id="skins"></div>
+  <button id="playBtn" disabled>Connecting...</button>
+  <div id="status">Connecting to server...</div>
+  <div class="help">Touch left side = steer &middot; BOOST button = speed &middot; PC: mouse/WASD + Space</div>
+</div>
+
+<div id="dead" class="screen hidden">
+  <h2>GAME OVER</h2>
+  <div id="deadScore">Score: 0</div>
+  <div id="deadBy"></div>
+  <button id="againBtn">Play again</button>
+  <button id="menuBtn" class="alt">Change name / skin</button>
+</div>
+
+<div id="rotate" class="screen hidden">Please rotate your phone to landscape</div>
+
+<script src="socket.io.min.js"></script>
+<script src="socket-client.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
